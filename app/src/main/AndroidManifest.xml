@@ -22,7 +22,6 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
@@ -37,7 +36,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.VOICE" />
             </intent-filter>
