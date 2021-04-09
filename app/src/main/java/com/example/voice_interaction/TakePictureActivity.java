@@ -7,9 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
-
-
-
 public class TakePictureActivity extends Activity {
 
     private static String TAG = "TakePictureActivity";

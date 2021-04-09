@@ -61,43 +61,34 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class CameraFragment extends Fragment implements View.OnClickListener {
-
     /**
      * Tag for the {@link Log}.
      */
     private static final String TAG = "Camera2BasicFragment";
-
     private static final String EXTRA_USE_FRONT_FACING_CAMERA = "android.intent.extra.USE_FRONT_CAMERA";
-
     private static final String EXTRA_TIMER_DURATION_SECONDS = "android.intent.extra.TIMER_DURATION_SECONDS";
     /**
      * Camera state: Showing camera preview.
      */
     private static final int STATE_PREVIEW = 0;
-
     /**
      * Camera state: Waiting for the focus to be locked.
      */
     private static final int STATE_WAITING_LOCK = 1;
-
     /**
      * Camera state: Waiting for the exposure to be precapture state.
      */
     private static final int STATE_WAITING_PRECAPTURE = 2;
-
     /**
      * Camera state: Waiting for the exposure state to be something other than precapture.
      */
     private static final int STATE_WAITING_NON_PRECAPTURE = 3;
-
     /**
      * Camera state: Picture was taken.
      */
     private static final int STATE_PICTURE_TAKEN = 4;
-
     private TextView mTimerCountdownLabel = null;
     private Toast mTimerCountdownToast = null;
-
     /**
      * {@link TextureView.SurfaceTextureListener} handles several lifecycle events on a
      * {@link TextureView}.
@@ -129,44 +120,35 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
         }
 
     };
-
     /**
      * ID of the current {@link CameraDevice}.
      */
     private String mCameraId;
-
     /**
      * An {@link AutoFitTextureView} for camera preview.
      */
     private AutoFitTextureView mTextureView;
-
     /**
      * A {@link CameraCaptureSession } for camera preview.
      */
     private CameraCaptureSession mCaptureSession;
-
     /**
      * A reference to the opened {@link CameraDevice}.
      */
     private CameraDevice mCameraDevice;
-
     /**
      * The {@link android.util.Size} of camera preview.
      */
     private Size mPreviewSize;
-
     /**
      * Characteristics of the current {@link CameraDevice}
      */
     private CameraCharacteristics mCharacteristics;
-
     private OrientationEventListener mOrientationListener;
-
     /**
      * Current device orientation in degrees.
      */
     private int mOrientation;
-
     /**
      * {@link CameraDevice.StateCallback} is called when {@link CameraDevice} changes its state.
      */
@@ -200,9 +182,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
                 activity.finish();
             }
         }
-
     };
-
     /**
      * An additional thread for running tasks that shouldn't block the UI.
      */
